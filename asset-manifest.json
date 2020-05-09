@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Bcod-E-Store-PWL-/static/css/main.d6c2332f.chunk.css",
+    "main.js": "/Bcod-E-Store-PWL-/static/js/main.893a9903.chunk.js",
+    "main.js.map": "/Bcod-E-Store-PWL-/static/js/main.893a9903.chunk.js.map",
+    "runtime-main.js": "/Bcod-E-Store-PWL-/static/js/runtime-main.ff26a691.js",
+    "runtime-main.js.map": "/Bcod-E-Store-PWL-/static/js/runtime-main.ff26a691.js.map",
+    "static/css/2.051905ae.chunk.css": "/Bcod-E-Store-PWL-/static/css/2.051905ae.chunk.css",
+    "static/js/2.f61b8fff.chunk.js": "/Bcod-E-Store-PWL-/static/js/2.f61b8fff.chunk.js",
+    "static/js/2.f61b8fff.chunk.js.map": "/Bcod-E-Store-PWL-/static/js/2.f61b8fff.chunk.js.map",
+    "index.html": "/Bcod-E-Store-PWL-/index.html",
+    "precache-manifest.0fb501cfac0cba55ce570b2c9bb4747f.js": "/Bcod-E-Store-PWL-/precache-manifest.0fb501cfac0cba55ce570b2c9bb4747f.js",
+    "service-worker.js": "/Bcod-E-Store-PWL-/service-worker.js",
+    "static/css/2.051905ae.chunk.css.map": "/Bcod-E-Store-PWL-/static/css/2.051905ae.chunk.css.map",
+    "static/css/main.d6c2332f.chunk.css.map": "/Bcod-E-Store-PWL-/static/css/main.d6c2332f.chunk.css.map",
+    "static/js/2.f61b8fff.chunk.js.LICENSE.txt": "/Bcod-E-Store-PWL-/static/js/2.f61b8fff.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff26a691.js",
+    "static/css/2.051905ae.chunk.css",
+    "static/js/2.f61b8fff.chunk.js",
+    "static/css/main.d6c2332f.chunk.css",
+    "static/js/main.893a9903.chunk.js"
+  ]
+}
