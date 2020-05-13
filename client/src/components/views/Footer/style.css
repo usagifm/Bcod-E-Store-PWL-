@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+.spons {
+    margin-top : 20px;
+
+}
+
+
+.footer  {
+  background : #555;
+    padding-top: 20px;
+    min-height: 30px;
+}
+.footer .box {
+    float : left;
+    text-align: center;
+    width: 33.3333% ;
+    padding: 10px ;
+    background: #555;
+}
+
+
+footer .p {
+    text-align: center;
+}

@@ -1,15 +1,29 @@
 import React from 'react'
 import {Icon} from 'antd';
+import './style.css';
 
 function Footer() {
     return (
-        <div style={{
-            height: '80px', display: 'flex',
-            flexDirection: 'column', alignItems: 'center',
-            justifyContent: 'center', fontSize:'1rem'
-        }}>
-           <p> Happy Coding  <Icon type="smile" /></p>
-        </div>
+        <nav className="footer" >
+         <div className="box">
+         <a href="https://play.google.com/store/apps">
+                 <p>Download Aplikasi Mobile Bcod-EStore</p>
+                 
+            </a>
+             </div>
+             
+             <div className="box">
+             <a href="">
+                 <p>Tim Pengembang : BcodEv</p>
+                 </a>
+             </div>
+
+             <div className="box">
+             <a href="">
+                 <p>Tata cara Pembelian\n hehe</p>
+                 </a>
+             </div>
+         </nav>
     )
 }
 

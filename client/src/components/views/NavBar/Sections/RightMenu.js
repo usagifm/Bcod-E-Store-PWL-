@@ -5,6 +5,7 @@ import axios from 'axios';
 import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import { autoInject } from 'async';
 
 function RightMenu(props) {
   const user = useSelector(state => state.user)
@@ -44,8 +45,8 @@ function RightMenu(props) {
 
         <Menu.Item key="cart" style={{ paddingBottom: 3 }}>
           <Badge count={user.userData && user.userData.cart.length}>
-            <a href="/user/cart" style={{ marginRight: -22 , color:'#667777'}}>
-              <Icon type="shopping-cart" style={{ fontSize: 30, marginBottom: 3 }} />
+            <a href="/user/cart" style={{ marginRight: -22 , color:'#ffd662ff'}}>
+              <Icon type="shopping-cart" style={{ fontSize: 28, marginBottom: 3, marginTop: 21 }} />
             </a>
           </Badge>
         </Menu.Item>
