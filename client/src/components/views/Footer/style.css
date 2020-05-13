@@ -8,19 +8,26 @@
 
 
 .footer  {
-  background : #555;
+  background : rgb(53, 54, 56);
     padding-top: 20px;
     min-height: 30px;
 }
 .footer .box {
     float : left;
     text-align: center;
-    width: 33.3333% ;
+    width: 33.333% ;
     padding: 10px ;
-    background: #555;
+    background: rgb(53, 54, 56);
 }
 
 
-footer .p {
+.footer p {
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffd662ff;
+}
+.container {
+    width: 80%;
+    margin : auto;
+    overflow: hidden;
 }

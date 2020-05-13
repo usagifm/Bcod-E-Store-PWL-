@@ -34,6 +34,8 @@
   padding: 10px 15px;
   color:#ffd662ff;
   width:auto;
+  font-size: 18px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
 
 .menu__container .ant-menu-horizontal {
