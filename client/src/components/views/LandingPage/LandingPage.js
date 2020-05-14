@@ -6,6 +6,9 @@ import CheckBox from './Sections/CheckBox';
 import RadioBox from './Sections/RadioBox';
 import { continents, price } from './Sections/Datas';
 import SearchFeature from './Sections/SearchFeature';
+import Slider from 'infinite-react-carousel';
+// belum digunakan
+// import importAllimg from '../../utils/importAllimg';
 
 const { Meta } = Card;
 
@@ -79,6 +82,16 @@ function LandingPage() {
         </Col>
     })
 
+    /* Bagian Header */
+
+    const settingsHeader = {
+        autoplay : true,
+        dots : true
+    }
+
+    /* Bagian Header */
+
+
 
     const showFilteredResults = (filters) => {
 
@@ -143,9 +156,23 @@ function LandingPage() {
 
     return (
         <div style={{ width: '75%', margin: '3rem auto' }}>
-            <div style={{ textAlign: 'center' }}>
-                <h2>  Let's Travel Anywhere  <Icon type="rocket" />  </h2>
+
+            {/* Header  */}
+
+            <div style={{ overflow:'hidden', width: 'auto', height:'200px', marginBottom:'20px' }} >
+                <Slider { ...settingsHeader }>
+                  <div>
+                    <img style={{ width: '100%', maxHeight: 'auto' }} src={require('../../promoimg/1589397439149_1427472_1.jpg')} alt="Photo 1"/>
+                  </div>
+                  <div>
+                    <img style={{ width: '100%', maxHeight: 'auto' }} src={require('../../promoimg/1589396167756_IMG-20200419-WA0011.jpg')} alt="Photo 2"/>
+                  </div>
+                  <div>
+                    <img style={{ width: '100%', maxHeight: 'auto' }} src={require('../../promoimg/1589396162829_IMG-20200419-WA0012.jpg')} alt="Photo 3"/>
+                  </div>
+                </Slider>
             </div>
+            
 
 
             {/* Filter  */}
