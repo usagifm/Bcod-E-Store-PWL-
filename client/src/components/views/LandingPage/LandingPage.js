@@ -160,20 +160,17 @@ function LandingPage() {
             {/* Header  */}
 
             <div style={{ 
-                overflow:'hidden', 
-                width: '1012px', 
-                height:'200px', 
-                marginBottom:'20px',
+                width: '100%',
             }} >
                 <Slider { ...settingsHeader }>
                   <div>
-                    <img style={{ width: '100%', height:'200px' }} src={require('../../promoimg/1589397439149_1427472_1.jpg')} alt="Photo 1"/>
+                    <img style={{ width: '100%', height:'220px' }} src={require('../../promoimg/1589397439149_1427472_1.jpg')} alt="Photo 1"/>
                   </div>
                   <div>
-                    <img style={{ width: '100%', height:'200px' }} src={require('../../promoimg/1589396167756_IMG-20200419-WA0011.jpg')} alt="Photo 2"/>
+                    <img style={{ width: '100%', height:'220px' }} src={require('../../promoimg/1589396167756_IMG-20200419-WA0011.jpg')} alt="Photo 2"/>
                   </div>
                   <div>
-                    <img style={{ width: '100%', height:'200px' }} src={require('../../promoimg/1589396162829_IMG-20200419-WA0012.jpg')} alt="Photo 3"/>
+                    <img style={{ width: '100%', height:'220px' }} src={require('../../promoimg/1589396162829_IMG-20200419-WA0012.jpg')} alt="Photo 3"/>
                   </div>
                 </Slider>
             </div>
@@ -209,7 +206,7 @@ function LandingPage() {
 
 
             {Products.length === 0 ?
-                <div style={{ display: 'flex', height: '300px', justifyContent: 'center', alignItems: 'center' }}>
+                <div style={{ display: 'flex', height: '350px', justifyContent: 'center', alignItems: 'center' }}>
                     <h2>No post yet...</h2>
                 </div> :
                 <div>
