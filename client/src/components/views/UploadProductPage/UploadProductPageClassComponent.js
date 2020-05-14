@@ -6,6 +6,9 @@ import FileUpload from '../../utils/FileUpload';
 const { Title } = Typography;
 const { TextArea } = Input;
 
+
+// Penambahan pertama 
+
 const Continents = [
     { key: 1, value: "Komputer Rakitan" },
     { key: 2, value: "Komputer Build Up" },

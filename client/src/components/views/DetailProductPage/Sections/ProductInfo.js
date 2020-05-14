@@ -15,6 +15,9 @@ function ProductInfo(props) {
         props.addToCart(props.detail._id)
     }
 
+    // Penambahan pertama 
+
+
 
     return (
         <div>

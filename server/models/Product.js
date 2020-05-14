@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+// Penambahan pertama 
+
+
 const productSchema = mongoose.Schema({
     writer: {
         type: Schema.Types.ObjectId,
