@@ -6,7 +6,7 @@ function ImageSlider(props) {
         <div style={{ 
             position:'relative',
             overflow:'hidden', 
-            width:'240px', 
+            width:'100%', 
             height:'240px' 
         }}>
 
