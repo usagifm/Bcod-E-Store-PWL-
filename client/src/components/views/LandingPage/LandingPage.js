@@ -89,7 +89,7 @@ function LandingPage() {
         dots : true
     }
 
-    /* Bagian Header */
+    /* End Bagian Header */
 
 
 
