@@ -15,14 +15,21 @@ function ProductInfo(props) {
         props.addToCart(props.detail._id)
     }
 
+    // Penambahan pertama 
+
+
 
     return (
         <div>
-            <Descriptions title="Product Info">
-                <Descriptions.Item label="Price"> {Product.price}</Descriptions.Item>
-                <Descriptions.Item label="Sold">{Product.sold}</Descriptions.Item>
-                <Descriptions.Item label="View"> {Product.views}</Descriptions.Item>
-                <Descriptions.Item label="Description"> {Product.description}</Descriptions.Item>
+            <Descriptions title="Info Produk">
+                <Descriptions.Item label="Merek"> {Product.brand}</Descriptions.Item>
+                <Descriptions.Item label="Harga(Rp)" > {Product.price}</Descriptions.Item>
+                <Descriptions.Item label="Terjual">{Product.sold}</Descriptions.Item>
+                <Descriptions.Item label="Stok"> {Product.stock}</Descriptions.Item>
+                <Descriptions.Item label="Dilihat"> {Product.views}</Descriptions.Item>
+                <Descriptions.Item label="Rating"> {Product.rating}</Descriptions.Item>
+                <Descriptions.Item label="Deskripsi" span={3}> {Product.description}</Descriptions.Item>
+            
             </Descriptions>
 
             <br />

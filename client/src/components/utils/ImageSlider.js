@@ -3,12 +3,20 @@ import { Carousel } from 'antd';
 
 function ImageSlider(props) {
     return (
-        <div>
+        <div style={{ 
+            position:'relative',
+            overflow:'hidden', 
+            width:'240px', 
+            height:'240px' 
+        }}>
 
             <Carousel dots={false}>
                 {props.images.map((image, index) => (
                     <div key={index}>
-                        <img style={{ width: '100%', maxHeight: 'auto' }}
+                        <img style={{
+                            width:'100%',
+                            height:'100%'
+                        }}
                             src={`http://localhost:5000/${image}`} alt="productImage" />
                     </div>
                 ))}

@@ -6,14 +6,20 @@ import FileUpload from '../../utils/FileUpload';
 const { Title } = Typography;
 const { TextArea } = Input;
 
+
+// Penambahan pertama 
+
 const Continents = [
-    { key: 1, value: "Africa" },
-    { key: 2, value: "Europe" },
-    { key: 3, value: "Asia" },
-    { key: 4, value: "North America" },
-    { key: 5, value: "South America" },
-    { key: 6, value: "Australia" },
-    { key: 7, value: "Antarctica" }
+    { key: 1, value: "Komputer Rakitan" },
+    { key: 2, value: "Komputer Build Up" },
+    { key: 3, value: "Laptop" },
+    { key: 4, value: "Aksesoris" },
+    { key: 5, value: "VGA Card" },
+    { key: 6, value: "Motherboard" },
+    { key: 7, value: "RAM" },
+    { key: 8, value: "Power Supply" },
+    { key: 9, value: "Software" }
+
 ]
 
 export class UploadProductPage extends Component {
@@ -23,7 +29,9 @@ export class UploadProductPage extends Component {
         description: '',
         continents: 1,
         images: [],
-        price: 0
+        stock: 0,
+        price: 0,
+        brand: ''
     }
 
     handleChangeTitle = (event) => {
@@ -32,6 +40,10 @@ export class UploadProductPage extends Component {
 
     handleChangePrice = (event) => {
         this.setState({ price: parseInt(event.currentTarget.value, 10) })
+    }
+
+    handleChangeStock = (event) => {
+        this.setState({ stock: parseInt(event.currentTarget.value, 10) })
     }
 
     handleChangeDecsription = (event) => {
@@ -43,6 +55,11 @@ export class UploadProductPage extends Component {
         this.setState({ continents: event.currentTarget.value })
     }
 
+    handleChangeBrand = (event) => {
+        this.setState({ brand: event.currentTarget.value })
+    }
+
+
     onSubmit = (event) => {
         event.preventDefault();
 
@@ -52,7 +69,7 @@ export class UploadProductPage extends Component {
 
         if (!this.state.title || !this.state.description ||
             !this.state.continents || !this.state.images
-            || !this.state.price) {
+            || !this.state.price || this.state.stock || this.state.brand) {
             return alert('Please first fill all the fields')
         }
 
@@ -62,7 +79,9 @@ export class UploadProductPage extends Component {
             description: this.state.description,
             images: this.state.images,
             continents: this.state.continents,
-            price: this.state.price
+            price: this.state.price,
+            stock: this.state.stock,
+            brand: this.state.stock,
         }
 
         axios.post('/api/product/uploadProduct', variables)
@@ -95,23 +114,30 @@ export class UploadProductPage extends Component {
                <FileUpload refreshFunction={this.updateFiles} />
 
                 <br /><br />
-                <label>Title</label>
+                <label>Nama Produk</label>
                 <Input
                     onChange={this.handleChangeTitle}
                     value={this.state.title}
                 />
                 <br /><br />
-                <label>Description</label>
+                <label>Deskripsi</label>
                 <TextArea
                     onChange={this.handleChangeDecsription}
                     value={this.state.description}
                 />
                 <br /><br />
-                <label>Price($)</label>
+                <label>Harga(Rp)</label>
                 <Input
                     type="number"
                     onChange={this.handleChangePrice}
                     value={this.state.price}
+                />
+                <br /><br />
+                <label>Jumlah Stock</label>
+                <Input
+                    onChange={this.handleChangeStock}
+                    value={this.state.stock}
+                    type="number"
                 />
                 <br /><br />
                 <select onChange={this.handleChangeContinents}>
@@ -120,6 +146,14 @@ export class UploadProductPage extends Component {
                     ))}
                 </select>
                 <br /><br />
+                <label>Merek</label>
+                <Input
+                    onChange={this.handleChangeBrand}
+                    value={this.state.brand}
+                />
+                <br />
+                <br />
+
 
                 <Button type="primary" size="large" onClick={this.onSubmit}>
                     Submit

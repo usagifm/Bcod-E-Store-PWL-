@@ -159,16 +159,21 @@ function LandingPage() {
 
             {/* Header  */}
 
-            <div style={{ overflow:'hidden', width: 'auto', height:'200px', marginBottom:'20px' }} >
+            <div style={{ 
+                overflow:'hidden', 
+                width: '1012px', 
+                height:'200px', 
+                marginBottom:'20px',
+            }} >
                 <Slider { ...settingsHeader }>
                   <div>
-                    <img style={{ width: '100%', maxHeight: 'auto' }} src={require('../../promoimg/1589397439149_1427472_1.jpg')} alt="Photo 1"/>
+                    <img style={{ width: '100%', height:'200px' }} src={require('../../promoimg/1589397439149_1427472_1.jpg')} alt="Photo 1"/>
                   </div>
                   <div>
-                    <img style={{ width: '100%', maxHeight: 'auto' }} src={require('../../promoimg/1589396167756_IMG-20200419-WA0011.jpg')} alt="Photo 2"/>
+                    <img style={{ width: '100%', height:'200px' }} src={require('../../promoimg/1589396167756_IMG-20200419-WA0011.jpg')} alt="Photo 2"/>
                   </div>
                   <div>
-                    <img style={{ width: '100%', maxHeight: 'auto' }} src={require('../../promoimg/1589396162829_IMG-20200419-WA0012.jpg')} alt="Photo 3"/>
+                    <img style={{ width: '100%', height:'200px' }} src={require('../../promoimg/1589396162829_IMG-20200419-WA0012.jpg')} alt="Photo 3"/>
                   </div>
                 </Slider>
             </div>
