@@ -8,23 +8,24 @@ function Footer() {
         <nav className="footer" >
             <div className="container">
          <div className="box">
-         <a href="https://play.google.com/store/apps">
-                 <p>Download Aplikasi Mobile Bcod-EStore</p>
-                 
-            </a>
+        <p>Download Aplikasi Mobile Bcod-EStore</p>
+         
              </div>
 
              <div className="box">
                  <p>Tim Pengembang</p>
-                 <img src="assets/facebook.PNG" width="49" ></img>
+                 <div className="menu_1">
+        <a href="/"><img style={{ width: '80px', height:'auto' }} src={require('../../promoimg/logow.png')} alt="Logo"/></a>
+      </div>
                  
              </div>
 
              <div className="box">
                  <p>Lebih Dekat dengan Kami!!</p>
-                 <img src="assets/facebook.PNG" width="49" ></img>
-                 <img src="assets/Instagram_icon.PNG" width="49" ></img>
-               
+                 <div className="menu_2">
+       
+      </div>
+  
 
              </div>
              </div>

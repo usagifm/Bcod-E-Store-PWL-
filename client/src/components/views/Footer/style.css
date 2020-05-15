@@ -31,3 +31,11 @@
     margin : auto;
     overflow: hidden;
 }
+.menu_1 a {
+    padding: 10px 10px;
+ 
+  }
+
+.menu_2 a {
+    padding: 0px;
+  }

@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+
+// Penambahan pertama 
+
+
 const productSchema = mongoose.Schema({
     writer: {
         type: Schema.Types.ObjectId,
@@ -22,13 +26,25 @@ const productSchema = mongoose.Schema({
         default: []
     },
     continents: {
-        type: Number,
+        type: String,
         default: 1
     },
     sold: {
         type: Number,
         maxlength: 100,
         default: 0
+    },
+    stock: {
+        type: Number,
+        default: 0
+    },
+    brand: {
+        type: String,
+        maxlength: 40
+    },
+    rating: {
+        type: String,
+        default: "Belum ada"
     },
     views: {
         type: Number,

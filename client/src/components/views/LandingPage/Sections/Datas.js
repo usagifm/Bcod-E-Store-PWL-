@@ -2,33 +2,43 @@
 const price = [
     {
         "_id": 0,
-        "name": "Any",
+        "name": "Semua Harga",
         "array": []
     },
     {
         "_id": 1,
-        "name": "$0 to $199",
-        "array": [0, 199]
+        "name": "Rp 0 - Rp 500.000",
+        "array": [0, 500000]
     },
     {
         "_id": 2,
-        "name": "$200 to $249",
-        "array": [200, 249]
+        "name": "Rp 500.001 - Rp 1.500.000",
+        "array": [500001, 1500000]
     },
     {
         "_id": 3,
-        "name": "$250 to $279",
-        "array": [250, 279]
+        "name": "Rp 1.500.001 - Rp 3.000.000",
+        "array": [1500001, 3000000]
     },
     {
         "_id": 4,
-        "name": "$280 to $299",
-        "array": [280, 299]
+        "name": "Rp 3.000.001 - Rp 6.000.000",
+        "array": [3000001, 6000000]
     },
     {
         "_id": 5,
-        "name": "More than $300",
-        "array": [300, 1500000]
+        "name": "Rp 6.000.001 - Rp 15.000.000",
+        "array": [6000001, 15000000]
+    },
+    {
+        "_id": 6,
+        "name": "Rp 15.000.001 - Rp 30.000.000",
+        "array": [15000001, 30000000]
+    },
+    {
+        "_id": 7,
+        "name": "Lebih dari Rp 30.000.000",
+        "array": [30000001, 10000000000]
     }
 ]
 
@@ -36,32 +46,40 @@ const price = [
 
 const continents = [
     {
-        "_id": 1,
-        "name": "Africa"
+        "_id": "Komputer Rakitan",
+        "name": "Komputer Rakitan"
     },
     {
-        "_id": 2,
-        "name": "Europe"
+        "_id": "Komputer Build Up",
+        "name": "Komputer Build Up"
     },
     {
-        "_id": 3,
-        "name": "Asia"
+        "_id": "Laptop",
+        "name": "Laptop"
     },
     {
-        "_id": 4,
-        "name": "North America"
+        "_id": "Aksesoris",
+        "name": "Aksesoris"
     },
     {
-        "_id": 5,
-        "name": "South America"
+        "_id": "VGA Card",
+        "name": "VGA Card" 
     },
     {
-        "_id": 6,
-        "name": "Australia"
+        "_id":  "Motherboard",
+        "name":  "Motherboard"
     },
     {
-        "_id": 7,
-        "name": "Antarctica"
+        "_id": "RAM" ,
+        "name": "RAM" 
+    },
+    {
+        "_id": "Power Supply" ,
+        "name": "RAM" 
+    },
+    {
+        "_id": "RAM" ,
+        "name": "Software" 
     }
 ]
 

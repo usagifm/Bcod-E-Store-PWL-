@@ -7,14 +7,19 @@ const { Title } = Typography;
 const { TextArea } = Input;
 
 const Continents = [
-    { key: 1, value: "Africa" },
-    { key: 2, value: "Europe" },
-    { key: 3, value: "Asia" },
-    { key: 4, value: "North America" },
-    { key: 5, value: "South America" },
-    { key: 6, value: "Australia" },
-    { key: 7, value: "Antarctica" }
+    { key: "Komputer Rakitan" },
+    { key: "Komputer Build Up" },
+    { key: "Laptop" },
+    { key: "Aksesoris" },
+    { key: "VGA Card" },
+    { key: "Motherboard" },
+    { key: "RAM" },
+    { key: "Power Supply" },
+    { key: "Software" }
+
 ]
+
+// Penambahan pertama 
 
 function UploadProductPage(props) {
 
@@ -22,6 +27,8 @@ function UploadProductPage(props) {
     const [DescriptionValue, setDescriptionValue] = useState("")
     const [PriceValue, setPriceValue] = useState(0)
     const [ContinentValue, setContinentValue] = useState(1)
+    const [StockValue, setStockValue] = useState(0)
+    const [BrandValue, setBrandValue] = useState("")
 
     const [Images, setImages] = useState([])
 
@@ -45,12 +52,21 @@ function UploadProductPage(props) {
     const updateImages = (newImages) => {
         setImages(newImages)
     }
+
+    const onStockChange = (event) => {
+        setStockValue(event.currentTarget.value)
+    }
+
+    const onBrandChange = (event) => {
+        setBrandValue(event.currentTarget.value)
+    }
+
     const onSubmit = (event) => {
         event.preventDefault();
 
 
         if (!TitleValue || !DescriptionValue || !PriceValue ||
-            !ContinentValue || !Images) {
+            !ContinentValue || !Images || !StockValue || !BrandValue)  {
             return alert('fill all the fields first!')
         }
 
@@ -61,6 +77,9 @@ function UploadProductPage(props) {
             price: PriceValue,
             images: Images,
             continents: ContinentValue,
+            stock: StockValue,
+            brand: BrandValue,
+            
         }
 
         Axios.post('/api/product/uploadProduct', variables)
@@ -89,32 +108,46 @@ function UploadProductPage(props) {
 
                 <br />
                 <br />
-                <label>Title</label>
+                <label>Nama Produk</label>
                 <Input
                     onChange={onTitleChange}
                     value={TitleValue}
                 />
                 <br />
                 <br />
-                <label>Description</label>
+                <label>Deskripsi</label>
                 <TextArea
                     onChange={onDescriptionChange}
                     value={DescriptionValue}
                 />
                 <br />
                 <br />
-                <label>Price($)</label>
+                <label>Harga(Rp)</label>
                 <Input
                     onChange={onPriceChange}
                     value={PriceValue}
                     type="number"
                 />
                 <br /><br />
+                <label>Jumlah Stock</label>
+                <Input
+                    onChange={onStockChange}
+                    value={StockValue}
+                    type="number"
+                />
+                <br /><br />
                 <select onChange={onContinentsSelectChange} value={ContinentValue}>
                     {Continents.map(item => (
-                        <option key={item.key} value={item.key}>{item.value} </option>
+                        <option key={item.key} value={item.key}>{item.key} </option>
                     ))}
                 </select>
+                <br />
+                <br />
+                <label>Merek</label>
+                <Input
+                    onChange={onBrandChange}
+                    value={BrandValue}
+                />
                 <br />
                 <br />
 

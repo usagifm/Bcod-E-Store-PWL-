@@ -22,6 +22,9 @@ function DetailProductPage(props) {
         dispatch(addToCart(productId))
     }
 
+    // Penambahan pertama 
+
+
     return (
         <div className="postPage" style={{ width: '100%', padding: '3rem 4rem' }}>
 

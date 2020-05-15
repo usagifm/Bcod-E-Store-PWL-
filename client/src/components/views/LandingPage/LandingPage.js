@@ -6,6 +6,9 @@ import CheckBox from './Sections/CheckBox';
 import RadioBox from './Sections/RadioBox';
 import { continents, price } from './Sections/Datas';
 import SearchFeature from './Sections/SearchFeature';
+import Slider from 'infinite-react-carousel';
+// belum digunakan
+// import importAllimg from '../../utils/importAllimg';
 
 const { Meta } = Card;
 
@@ -79,6 +82,16 @@ function LandingPage() {
         </Col>
     })
 
+    /* Bagian Header */
+
+    const settingsHeader = {
+        autoplay : true,
+        dots : true
+    }
+
+    /* Bagian Header */
+
+
 
     const showFilteredResults = (filters) => {
 
@@ -143,9 +156,25 @@ function LandingPage() {
 
     return (
         <div style={{ width: '75%', margin: '3rem auto' }}>
-            <div style={{ textAlign: 'center' }}>
-                <h2>  Let's Travel Anywhere  <Icon type="rocket" />  </h2>
+
+            {/* Header  */}
+
+            <div style={{ 
+                width: '100%',
+            }} >
+                <Slider { ...settingsHeader }>
+                  <div>
+                    <img style={{ width: '100%', height:'200px' }} src={require('../../promoimg/grandopening.jpg')} alt="Photo 1"/>
+                  </div>
+                  <div>
+                    <img style={{ width: '100%', height:'200px' }} src={require('../../promoimg/promolebaran.jpg')} alt="Photo 2"/>
+                  </div>
+                  <div>
+                    <img style={{ width: '100%', height:'200px' }} src={require('../../promoimg/Social.jpg')} alt="Photo 3"/>
+                  </div>
+                </Slider>
             </div>
+            
 
 
             {/* Filter  */}
@@ -177,7 +206,7 @@ function LandingPage() {
 
 
             {Products.length === 0 ?
-                <div style={{ display: 'flex', height: '300px', justifyContent: 'center', alignItems: 'center' }}>
+                <div style={{ display: 'flex', height: '350px', justifyContent: 'center', alignItems: 'center' }}>
                     <h2>No post yet...</h2>
                 </div> :
                 <div>
