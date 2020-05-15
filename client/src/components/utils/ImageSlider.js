@@ -3,8 +3,8 @@ import { Carousel } from 'antd';
 
 function ImageSlider(props) {
     return (
-        <div style={{ 
-            position:'relative',
+        <div style={{
+            position:'relative', 
             overflow:'hidden', 
             width:'100%', 
             height:'240px' 

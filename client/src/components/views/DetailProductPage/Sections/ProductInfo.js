@@ -22,11 +22,11 @@ function ProductInfo(props) {
     return (
         <div>
             <Descriptions title="Info Produk">
+            <Descriptions.Item label="Kategori"> {Product.continents}</Descriptions.Item>
                 <Descriptions.Item label="Merek"> {Product.brand}</Descriptions.Item>
                 <Descriptions.Item label="Harga(Rp)" > {Product.price}</Descriptions.Item>
                 <Descriptions.Item label="Terjual">{Product.sold}</Descriptions.Item>
                 <Descriptions.Item label="Stok"> {Product.stock}</Descriptions.Item>
-                <Descriptions.Item label="Dilihat"> {Product.views}</Descriptions.Item>
                 <Descriptions.Item label="Rating"> {Product.rating}</Descriptions.Item>
                 <Descriptions.Item label="Deskripsi" span={3}> {Product.description}</Descriptions.Item>
             

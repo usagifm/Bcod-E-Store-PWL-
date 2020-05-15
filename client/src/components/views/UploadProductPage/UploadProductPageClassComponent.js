@@ -10,17 +10,18 @@ const { TextArea } = Input;
 // Penambahan pertama 
 
 const Continents = [
-    { key: 1, value: "Komputer Rakitan" },
-    { key: 2, value: "Komputer Build Up" },
-    { key: 3, value: "Laptop" },
-    { key: 4, value: "Aksesoris" },
-    { key: 5, value: "VGA Card" },
-    { key: 6, value: "Motherboard" },
-    { key: 7, value: "RAM" },
-    { key: 8, value: "Power Supply" },
-    { key: 9, value: "Software" }
+    { key: "Komputer Rakitan" },
+    { key: "Komputer Build Up" },
+    { key: "Laptop" },
+    { key: "Aksesoris" },
+    { key: "VGA Card" },
+    { key: "Motherboard" },
+    { key: "RAM" },
+    { key: "Power Supply" },
+    { key: "Software" }
 
 ]
+
 
 export class UploadProductPage extends Component {
 
@@ -142,7 +143,7 @@ export class UploadProductPage extends Component {
                 <br /><br />
                 <select onChange={this.handleChangeContinents}>
                     {Continents.map(item => (
-                        <option key={item.key} value={item.key}>{item.value}</option>
+                        <option key={item.key} value={item.key}>{item.key}</option>
                     ))}
                 </select>
                 <br /><br />
