@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "http-proxy-middleware": "^1.0.3"
   }
 }
