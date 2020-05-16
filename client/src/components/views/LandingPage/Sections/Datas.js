@@ -75,7 +75,7 @@ const category = [
     },
     {
         "_id": "Power Supply" ,
-        "name": "RAM" 
+        "name": "Power Supply" 
     },
     {
         "_id": "Software" ,
