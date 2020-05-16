@@ -34,7 +34,7 @@ const price = [
 
 
 
-const continents = [
+const category = [
     {
         "_id": 1,
         "name": "Africa"
@@ -60,13 +60,18 @@ const continents = [
         "name": "Australia"
     },
     {
+<<<<<<< Updated upstream
         "_id": 7,
         "name": "Antarctica"
+=======
+        "_id": "Software" ,
+        "name": "Software" 
+>>>>>>> Stashed changes
     }
 ]
 
 
 export {
     price,
-    continents
+    category,
 }

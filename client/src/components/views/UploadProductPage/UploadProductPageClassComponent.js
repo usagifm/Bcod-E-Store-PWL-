@@ -9,6 +9,7 @@ const { TextArea } = Input;
 
 // Penambahan pertama 
 
+<<<<<<< Updated upstream
 const Continents = [
     { key: 1, value: "Komputer Rakitan" },
     { key: 2, value: "Komputer Build Up" },
@@ -19,6 +20,18 @@ const Continents = [
     { key: 7, value: "RAM" },
     { key: 8, value: "Power Supply" },
     { key: 9, value: "Software" }
+=======
+const Category = [
+    { key: "Komputer Rakitan" },
+    { key: "Komputer Build Up" },
+    { key: "Laptop" },
+    { key: "Aksesoris" },
+    { key: "VGA Card" },
+    { key: "Motherboard" },
+    { key: "RAM" },
+    { key: "Power Supply" },
+    { key: "Software" }
+>>>>>>> Stashed changes
 
 ]
 
@@ -27,7 +40,7 @@ export class UploadProductPage extends Component {
     state = {
         title: '',
         description: '',
-        continents: 1,
+        category: "Komputer Rakitan",
         images: [],
         stock: 0,
         price: 0,
@@ -51,8 +64,8 @@ export class UploadProductPage extends Component {
         this.setState({ description: event.currentTarget.value })
     }
 
-    handleChangeContinents = (event) => {
-        this.setState({ continents: event.currentTarget.value })
+    handleChangeCategory = (event) => {
+        this.setState({ category: event.currentTarget.value })
     }
 
     handleChangeBrand = (event) => {
@@ -68,7 +81,7 @@ export class UploadProductPage extends Component {
         }
 
         if (!this.state.title || !this.state.description ||
-            !this.state.continents || !this.state.images
+            !this.state.category || !this.state.images
             || !this.state.price || this.state.stock || this.state.brand) {
             return alert('Please first fill all the fields')
         }
@@ -78,7 +91,7 @@ export class UploadProductPage extends Component {
             title: this.state.title,
             description: this.state.description,
             images: this.state.images,
-            continents: this.state.continents,
+            category: this.state.category,
             price: this.state.price,
             stock: this.state.stock,
             brand: this.state.stock,
@@ -140,9 +153,15 @@ export class UploadProductPage extends Component {
                     type="number"
                 />
                 <br /><br />
+<<<<<<< Updated upstream
                 <select onChange={this.handleChangeContinents}>
                     {Continents.map(item => (
                         <option key={item.key} value={item.key}>{item.value}</option>
+=======
+                <select onChange={this.handleChangeCategory}>
+                    {Category.map(item => (
+                        <option key={item.key} value={item.key}>{item.key}</option>
+>>>>>>> Stashed changes
                     ))}
                 </select>
                 <br /><br />

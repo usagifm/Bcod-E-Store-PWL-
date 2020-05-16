@@ -15,7 +15,7 @@ var storage = multer.diskStorage({
     fileFilter: (req, file, cb) => {
         const ext = path.extname(file.originalname)
         if (ext !== '.jpg' || ext !== '.png') {
-            return cb(res.status(400).end('only jpg, png are allowed'), false);
+            return cb(res.status(400).end('Masukan file gambar yang berformat PNG atau JPG'), false);
         }
         cb(null, true)
     }

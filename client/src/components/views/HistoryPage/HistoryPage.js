@@ -5,17 +5,17 @@ function HistoryPage(props) {
     return (
         <div style={{ width: '80%', margin: '3rem auto' }}>
             <div style={{ textAlign: 'center' }}>
-                <h1>History</h1>
+                <h1>Riwayat Pembelian</h1>
             </div>
             <br />
 
             <table>
                 <thead>
                     <tr>
-                        <th>Payment Id</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Date of Purchase</th>
+                        <th>Id Pembayaran</th>
+                        <th>Total Pembayaran</th>
+                        <th>Jumlah</th>
+                        <th>Tanggal Pembelian</th>
                     </tr>
                 </thead>
 

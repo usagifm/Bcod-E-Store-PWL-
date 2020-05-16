@@ -39,7 +39,11 @@ function CheckBox(props) {
     return (
         <div>
             <Collapse defaultActiveKey={['0']} >
+<<<<<<< Updated upstream
                 <Panel header="Continents" key="1">
+=======
+                <Panel header="Kategori" key="Komputer Rakitan">
+>>>>>>> Stashed changes
                     {renderCheckboxLists()}
                 </Panel>
             </Collapse>

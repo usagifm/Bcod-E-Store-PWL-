@@ -6,6 +6,7 @@ import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
 import { useSelector } from "react-redux";
 
+
 function RightMenu(props) {
   const user = useSelector(state => state.user)
 
@@ -42,10 +43,10 @@ function RightMenu(props) {
           <a href="/product/upload">Upload</a>
         </Menu.Item>
 
-        <Menu.Item key="cart" style={{ paddingBottom: 3 }}>
-          <Badge count={user.userData && user.userData.cart.length}>
-            <a href="/user/cart" style={{ marginRight: -22 , color:'#667777'}}>
-              <Icon type="shopping-cart" style={{ fontSize: 30, marginBottom: 3 }} />
+        <Menu.Item key="cart" style={{  }}>
+          <Badge count={user.userData && user.userData.cart.length}  style={{  }}>
+            <a href="/user/cart" style={{ color:'#ffd662ff'}}>
+              <Icon type="shopping-cart" style={{ fontSize: 30 }} />
             </a>
           </Badge>
         </Menu.Item>

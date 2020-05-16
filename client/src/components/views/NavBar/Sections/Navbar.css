@@ -1,4 +1,8 @@
 @import '~antd/dist/antd.css';
+@import '<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 .menu {
   padding: 0 20px;
@@ -30,6 +34,13 @@
 .menu__container .ant-menu-item a,
 .menu__container .ant-menu-submenu-title a {
   padding: 10px 15px;
+<<<<<<< Updated upstream
+=======
+  color:#ffd662ff;
+  width:auto;
+  font-size: 17px;
+  font-family: 'Fredoka One';
+>>>>>>> Stashed changes
 }
 
 .menu__container .ant-menu-horizontal {

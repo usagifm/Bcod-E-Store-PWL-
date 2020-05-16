@@ -6,6 +6,7 @@ import Axios from 'axios';
 const { Title } = Typography;
 const { TextArea } = Input;
 
+<<<<<<< Updated upstream
 const Continents = [
     { key: 1, value: "Komputer Rakitan" },
     { key: 2, value: "Komputer Build Up" },
@@ -16,6 +17,18 @@ const Continents = [
     { key: 7, value: "RAM" },
     { key: 8, value: "Power Supply" },
     { key: 9, value: "Software" }
+=======
+const Category = [
+    { key: "Komputer Rakitan" },
+    { key: "Komputer Build Up" },
+    { key: "Laptop" },
+    { key: "Aksesoris" },
+    { key: "VGA Card" },
+    { key: "Motherboard" },
+    { key: "RAM" },
+    { key: "Power Supply" },
+    { key: "Software" }
+>>>>>>> Stashed changes
 
 ]
 
@@ -26,7 +39,7 @@ function UploadProductPage(props) {
     const [TitleValue, setTitleValue] = useState("")
     const [DescriptionValue, setDescriptionValue] = useState("")
     const [PriceValue, setPriceValue] = useState(0)
-    const [ContinentValue, setContinentValue] = useState(1)
+    const [CategoryValue, setCategoryValue] = useState("Komputer Rakitan")
     const [StockValue, setStockValue] = useState(0)
     const [BrandValue, setBrandValue] = useState("")
 
@@ -45,8 +58,8 @@ function UploadProductPage(props) {
         setPriceValue(event.currentTarget.value)
     }
 
-    const onContinentsSelectChange = (event) => {
-        setContinentValue(event.currentTarget.value)
+    const onCategorySelectChange = (event) => {
+        setCategoryValue(event.currentTarget.value)
     }
 
     const updateImages = (newImages) => {
@@ -66,7 +79,7 @@ function UploadProductPage(props) {
 
 
         if (!TitleValue || !DescriptionValue || !PriceValue ||
-            !ContinentValue || !Images || !StockValue || !BrandValue)  {
+            !CategoryValue || !Images || !StockValue || !BrandValue)  {
             return alert('fill all the fields first!')
         }
 
@@ -76,7 +89,7 @@ function UploadProductPage(props) {
             description: DescriptionValue,
             price: PriceValue,
             images: Images,
-            continents: ContinentValue,
+            category: CategoryValue,
             stock: StockValue,
             brand: BrandValue,
             
@@ -85,10 +98,10 @@ function UploadProductPage(props) {
         Axios.post('/api/product/uploadProduct', variables)
             .then(response => {
                 if (response.data.success) {
-                    alert('Product Successfully Uploaded')
+                    alert('Produk Berhasil Ditambahkan !')
                     props.history.push('/')
                 } else {
-                    alert('Failed to upload Product')
+                    alert('Gagal Menambahkan Produk !')
                 }
             })
 
@@ -136,9 +149,15 @@ function UploadProductPage(props) {
                     type="number"
                 />
                 <br /><br />
+<<<<<<< Updated upstream
                 <select onChange={onContinentsSelectChange} value={ContinentValue}>
                     {Continents.map(item => (
                         <option key={item.key} value={item.key}>{item.value} </option>
+=======
+                <select onChange={onCategorySelectChange} value={CategoryValue}>
+                    {Category.map(item => (
+                        <option key={item.key} value={item.key}>{item.key} </option>
+>>>>>>> Stashed changes
                     ))}
                 </select>
                 <br />
