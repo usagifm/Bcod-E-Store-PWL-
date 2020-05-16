@@ -11,33 +11,35 @@ import {
   Button,
 } from 'antd';
 
-const formItemLayout = {
-  labelCol: {
-    xs: { span: 24 },
-    sm: { span: 8 },
-  },
-  wrapperCol: {
-    xs: { span: 24 },
-    sm: { span: 16 },
-  },
-};
-const tailFormItemLayout = {
-  wrapperCol: {
-    xs: {
-      span: 24,
-      offset: 0,
-    },
-    sm: {
-      span: 16,
-      offset: 8,
-    },
-  },
-};
+
+        const formItemLayout = {
+          labelCol: {
+            xs: { span: 24 },
+            sm: { span: 8 },
+          },
+          wrapperCol: {
+            xs: { span: 24 },
+            sm: { span: 16 },
+          },
+        };
+        const tailFormItemLayout = {
+          wrapperCol: {
+            xs: {
+              span: 24,
+              offset: 0,
+            },
+            sm: {
+              span: 16,
+              offset: 8,
+            },
+          },
+        };
 
 function RegisterPage(props) {
   const dispatch = useDispatch();
   return (
 
+    
     <Formik
       initialValues={{
         email: '',
@@ -46,20 +48,23 @@ function RegisterPage(props) {
         password: '',
         confirmPassword: ''
       }}
+
+
+      
       validationSchema={Yup.object().shape({
         name: Yup.string()
-          .required('Name is required'),
+          .required('Masukan Nama Anda'),
         lastName: Yup.string()
-          .required('Last Name is required'),
+          .required('Masukan Nama Belakang Anda'),
         email: Yup.string()
-          .email('Email is invalid')
-          .required('Email is required'),
+          .email('Email tidak sesuai')
+          .required('Masukan Email Anda'),
         password: Yup.string()
-          .min(6, 'Password must be at least 6 characters')
-          .required('Password is required'),
+          .min(6, 'Password setidaknya harus 6 karakter')
+          .required('Masukan Password Anda'),
         confirmPassword: Yup.string()
-          .oneOf([Yup.ref('password'), null], 'Passwords must match')
-          .required('Confirm Password is required')
+          .oneOf([Yup.ref('password'), null], 'Password Harus Sama')
+          .required('Konfirmasi Password Anda ')
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -97,14 +102,18 @@ function RegisterPage(props) {
           handleReset,
         } = props;
         return (
+
+
+
+          
           <div className="app">
-            <h2>Sign up</h2>
+            <h2 style={{ marginLeft:"120px"}}>Sign up</h2>
             <Form style={{ minWidth: '375px' }} {...formItemLayout} onSubmit={handleSubmit} >
 
-              <Form.Item required label="Name">
+              <Form.Item required label="Nama Depan">
                 <Input
                   id="name"
-                  placeholder="Enter your name"
+                  placeholder="Masukan Nama Depan Anda"
                   type="text"
                   value={values.name}
                   onChange={handleChange}
@@ -118,10 +127,10 @@ function RegisterPage(props) {
                 )}
               </Form.Item>
 
-              <Form.Item required label="Last Name">
+              <Form.Item required label="Nama Belakang">
                 <Input
                   id="lastName"
-                  placeholder="Enter your Last Name"
+                  placeholder="Masukan Nama Belakang Anda "
                   type="text"
                   value={values.lastName}
                   onChange={handleChange}
@@ -138,7 +147,7 @@ function RegisterPage(props) {
               <Form.Item required label="Email" hasFeedback validateStatus={errors.email && touched.email ? "error" : 'success'}>
                 <Input
                   id="email"
-                  placeholder="Enter your Email"
+                  placeholder="Masukan Email Anda"
                   type="email"
                   value={values.email}
                   onChange={handleChange}
@@ -155,7 +164,7 @@ function RegisterPage(props) {
               <Form.Item required label="Password" hasFeedback validateStatus={errors.password && touched.password ? "error" : 'success'}>
                 <Input
                   id="password"
-                  placeholder="Enter your password"
+                  placeholder="Masukan Password Anda d"
                   type="password"
                   value={values.password}
                   onChange={handleChange}
@@ -169,10 +178,10 @@ function RegisterPage(props) {
                 )}
               </Form.Item>
 
-              <Form.Item required label="Confirm" hasFeedback>
+              <Form.Item required label="Konfirmasi" hasFeedback>
                 <Input
                   id="confirmPassword"
-                  placeholder="Enter your confirmPassword"
+                  placeholder="Masukan Ulang Password Anda"
                   type="password"
                   value={values.confirmPassword}
                   onChange={handleChange}
@@ -187,8 +196,8 @@ function RegisterPage(props) {
               </Form.Item>
 
               <Form.Item {...tailFormItemLayout}>
-                <Button onClick={handleSubmit} type="primary" disabled={isSubmitting}>
-                  Submit
+                <Button onClick={handleSubmit} type="primary" disabled={isSubmitting} style={{minWidth:'100%'}}>
+                  Daftar
                 </Button>
               </Form.Item>
             </Form>

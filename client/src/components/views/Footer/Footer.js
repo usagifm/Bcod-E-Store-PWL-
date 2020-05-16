@@ -26,9 +26,9 @@ function Footer() {
              <div className="box">
                  <p>Lebih Dekat dengan Kami!!</p>
                  <div className="menu_2">
-        <a href="https://www.instagram.com"><img style={{ width: '44px', height:'auto' }} src={require('../../promoimg/Instagram_icon.png')} alt="Logo"/></a>
-        <a href="https://web.facebook.com/"><img style={{ width: '50px', height:'auto' }} src={require('../../promoimg/facebook.png')} alt="Logo"/></a>
-        <a href="https://twitter.com/home"><img style={{ width: '43px', height:'auto' }} src={require('../../promoimg/twitt.png')} alt="Logo"/></a>
+        <a href="https://www.instagram.com"><img style={{ width: '30px', height:'auto' }} src={require('../../promoimg/Instagram_icon.png')} alt="Logo"/></a>
+        <a href="https://web.facebook.com/"><img style={{ width: '30px', height:'auto' }} src={require('../../promoimg/facebook.png')} alt="Logo"/></a>
+        <a href="https://twitter.com/home"><img style={{ width: '30px', height:'auto' }} src={require('../../promoimg/twitt.png')} alt="Logo"/></a>
       </div>
   
 

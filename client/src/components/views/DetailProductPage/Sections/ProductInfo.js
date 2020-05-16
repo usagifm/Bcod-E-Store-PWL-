@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Descriptions } from 'antd';
+
+import { Button, Descriptions, Icon } from 'antd';
+
 
 function ProductInfo(props) {
 
@@ -17,16 +19,22 @@ function ProductInfo(props) {
 
     // Penambahan pertama 
 
+    var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'IDR',
+      });
 
 
     return (
         <div>
-            <Descriptions title="Info Produk">
-            <Descriptions.Item label="Kategori"> {Product.continents}</Descriptions.Item>
+            <Descriptions title="Info Produk">]
+            <Descriptions.Item label="Kategori"> {Product.category}</Descriptions.Item>
+
                 <Descriptions.Item label="Merek"> {Product.brand}</Descriptions.Item>
-                <Descriptions.Item label="Harga(Rp)" > {Product.price}</Descriptions.Item>
+                <Descriptions.Item label="Harga(Rp)" > {formatter.format(Product.price)}</Descriptions.Item>
                 <Descriptions.Item label="Terjual">{Product.sold}</Descriptions.Item>
                 <Descriptions.Item label="Stok"> {Product.stock}</Descriptions.Item>
+                <Descriptions.Item label="Dilihat"> {Product.views}</Descriptions.Item>
                 <Descriptions.Item label="Rating"> {Product.rating}</Descriptions.Item>
                 <Descriptions.Item label="Deskripsi" span={3}> {Product.description}</Descriptions.Item>
             
@@ -36,10 +44,10 @@ function ProductInfo(props) {
             <br />
             <br />
             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <Button size="large" shape="round" type="danger"
+                <Button size="large" shape="round"  type="danger"
                     onClick={addToCarthandler}
                 >
-                    Add to Cart
+                    Tambahkan Ke Keranjang
                     </Button>
             </div>
         </div>

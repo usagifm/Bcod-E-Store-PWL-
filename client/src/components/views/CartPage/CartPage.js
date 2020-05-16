@@ -80,9 +80,16 @@ function CartPage(props) {
     }
 
 
+    var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'IDR',
+      });
+      
+      
+
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
-            <h1>My Cart</h1>
+            <h1>Keranjang Belanja</h1>
             <div>
 
                 <UserCardBlock
@@ -93,7 +100,7 @@ function CartPage(props) {
 
                 {ShowTotal ?
                     <div style={{ marginTop: '3rem' }}>
-                        <h2>Total amount: ${Total} </h2>
+                        <h2>Total Tagihan: {formatter.format(Total)} </h2>
                     </div>
                     :
                     ShowSuccess ?
@@ -107,7 +114,7 @@ function CartPage(props) {
                         }}>
                             <br />
                             <Empty description={false} />
-                            <p>No Items In the Cart</p>
+                            <p>Keranjang belanja anda kosong</p>
 
                         </div>
                 }

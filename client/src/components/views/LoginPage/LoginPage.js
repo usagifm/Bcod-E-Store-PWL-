@@ -29,11 +29,11 @@ function LoginPage(props) {
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string()
-          .email('Email is invalid')
-          .required('Email is required'),
+          .email('Email tidak terdaftar')
+          .required('Masukan Email '),
         password: Yup.string()
-          .min(6, 'Password must be at least 6 characters')
-          .required('Password is required'),
+          .min(6, 'Password minimal 6 karakter')
+          .required('Masukan password anda'),
       })}
       onSubmit={(values, { setSubmitting }) => {
         setTimeout(() => {
@@ -88,7 +88,7 @@ function LoginPage(props) {
                 <Input
                   id="email"
                   prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  placeholder="Enter your email"
+                  placeholder="Masukan Email Anda"
                   type="email"
                   value={values.email}
                   onChange={handleChange}
@@ -106,7 +106,7 @@ function LoginPage(props) {
                 <Input
                   id="password"
                   prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  placeholder="Enter your password"
+                  placeholder="Masukan Password Anda"
                   type="password"
                   value={values.password}
                   onChange={handleChange}
@@ -127,14 +127,14 @@ function LoginPage(props) {
               <Form.Item>
                 <Checkbox id="rememberMe" onChange={handleRememberMe} checked={rememberMe} >Remember me</Checkbox>
                 <a className="login-form-forgot" href="/reset_user" style={{ float: 'right' }}>
-                  forgot password
+                  Lupa Password ?
                   </a>
                 <div>
                   <Button type="primary" htmlType="submit" className="login-form-button" style={{ minWidth: '100%' }} disabled={isSubmitting} onSubmit={handleSubmit}>
                     Log in
                 </Button>
                 </div>
-                Or <a href="/register">register now!</a>
+                <a href="/register">Daftar Sekarang!</a>
               </Form.Item>
             </form>
           </div>

@@ -19,7 +19,7 @@ function NavBar() {
     <nav className="menu" style={{ position: 'fixed', zIndex: 5, width: '100%' }}>
       <div className="menu__logo">
 
-        <a href="/"><img style={{ width: '80px', height:'auto' }} src={require('../../promoimg/logow.png')} alt="Logo"/></a>
+        <a href="/"><img style={{ width: '80px', height:'32px' }} src={require('../../promoimg/logow.png')} alt="Logo"/></a>
 
       </div>
       <div className="menu__container">
@@ -37,7 +37,7 @@ function NavBar() {
           <Icon type="align-right" />
         </Button>
         <Drawer
-          title="Basic Drawer"
+          title="BCOD E Store"
           placement="right"
           className="menu_drawer"
           closable={false}

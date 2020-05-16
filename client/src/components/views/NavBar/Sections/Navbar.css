@@ -1,5 +1,8 @@
 @import '~antd/dist/antd.css';
 
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 .menu {
   padding: 0 20px;
   border-bottom: solid 1px #e8e8e8;
@@ -34,8 +37,9 @@
   padding: 10px 15px;
   color:#ffd662ff;
   width:auto;
-  font-size: 18px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+  font-size: 17px;
+  font-family: 'Fredoka One';
+  
 }
 
 .menu__container .ant-menu-horizontal {

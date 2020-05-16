@@ -4,11 +4,9 @@ import { Icon, Col, Card, Row } from 'antd';
 import ImageSlider from '../../utils/ImageSlider';
 import CheckBox from './Sections/CheckBox';
 import RadioBox from './Sections/RadioBox';
-import { continents, price } from './Sections/Datas';
+import { category, price } from './Sections/Datas';
 import SearchFeature from './Sections/SearchFeature';
 import Slider from 'infinite-react-carousel';
-// belum digunakan
-// import importAllimg from '../../utils/importAllimg';
 
 const { Meta } = Card;
 
@@ -21,7 +19,7 @@ function LandingPage() {
     const [SearchTerms, setSearchTerms] = useState("")
 
     const [Filters, setFilters] = useState({
-        continents: [],
+        category: [],
         price: []
     })
 
@@ -67,6 +65,13 @@ function LandingPage() {
     }
 
 
+    var formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'IDR',
+      });
+
+
+
     const renderCards = Products.map((product, index) => {
 
         return <Col lg={6} md={8} xs={24}>
@@ -76,7 +81,7 @@ function LandingPage() {
             >
                 <Meta
                     title={product.title}
-                    description={`$${product.price}`}
+                    description={formatter.format(product.price)}
                 />
             </Card>
         </Col>
@@ -154,6 +159,7 @@ function LandingPage() {
     }
 
 
+
     return (
         <div style={{ width: '75%', margin: '3rem auto' }}>
 
@@ -182,8 +188,8 @@ function LandingPage() {
             <Row gutter={[16, 16]}>
                 <Col lg={12} xs={24} >
                     <CheckBox
-                        list={continents}
-                        handleFilters={filters => handleFilters(filters, "continents")}
+                        list={category}
+                        handleFilters={filters => handleFilters(filters, "category")}
                     />
                 </Col>
                 <Col lg={12} xs={24}>
@@ -207,7 +213,7 @@ function LandingPage() {
 
             {Products.length === 0 ?
                 <div style={{ display: 'flex', height: '350px', justifyContent: 'center', alignItems: 'center' }}>
-                    <h2>No post yet...</h2>
+                    <h2>Belum ada post...</h2>
                 </div> :
                 <div>
                     <Row gutter={[16, 16]}>

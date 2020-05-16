@@ -44,7 +44,7 @@ const price = [
 
 
 
-const continents = [
+const category = [
     {
         "_id": "Komputer Rakitan",
         "name": "Komputer Rakitan"
@@ -78,7 +78,7 @@ const continents = [
         "name": "RAM" 
     },
     {
-        "_id": "RAM" ,
+        "_id": "Software" ,
         "name": "Software" 
     }
 ]
@@ -86,5 +86,5 @@ const continents = [
 
 export {
     price,
-    continents
+    category
 }
